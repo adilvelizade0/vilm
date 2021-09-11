@@ -119,6 +119,12 @@ nav {
   font-size: 48px;
   color: #ffffff;
   text-align: center;
+  position: relative;
+
+  /** Add Search **/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .tv__section--title {
@@ -128,6 +134,43 @@ nav {
   font-size: 48px;
   color: #ffffff;
   text-align: center;
+}
+
+.movie__section--searchContainer {
+  position: relative;
+  width: 800px;
+  display: flex;
+  justify-content: center;
+}
+
+.movie__section--search {
+  outline: none;
+  width: 475px;
+  height: 58px;
+  margin: 20px 0;
+  border: 0;
+  background-color: rgba(196, 196, 196, 0.3);
+  border-radius: 8px;
+
+  /* * Font * */
+  padding-left: 19px;
+  font-weight: normal;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.search-icon {
+  position: absolute;
+  top: 20px;
+  right: 161px;
+  background-color: #3b3b3b;
+  padding: 11.5px;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+}
+
+.search-icon:active {
+  opacity: 0.8;
 }
 
 .movie__section--cards {

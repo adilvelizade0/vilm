@@ -1,5 +1,10 @@
 const films = [
   {
+    title: 'Bliss',
+    image: './image/film-1.png',
+    date: 2021,
+  },
+  {
     title: 'Malcolm & Marie',
     image: './image/film-2.png',
     date: '2021',
@@ -72,7 +77,7 @@ const tvs = [
 const movieContainer = document.querySelector('.movie__section--cards');
 const tvContainer = document.querySelector('.tv__section--cards');
 
-function movieAddtoHtml(film) {
+function movieAddToHtml(film) {
   const html = `
      <span class="movie__section--card">
         <img src="${film.image}" alt="film-1">
@@ -83,7 +88,7 @@ function movieAddtoHtml(film) {
   movieContainer.innerHTML += html;
 }
 
-function tvAddtoHtml(tv) {
+function tvAddToHtml(tv) {
   const html = `
     <span class="movie__section--card">
         <img src="${tv.image}" alt="film-1">
@@ -94,10 +99,12 @@ function tvAddtoHtml(tv) {
   tvContainer.innerHTML += html;
 }
 
-for (let film of films) {
-  movieAddtoHtml(film);
-}
+films.forEach(film => {
+  movieAddToHtml(film);
+});
 
-for (let tv of tvs) {
-  tvAddtoHtml(tv);
-}
+tvs.forEach(tv => {
+  tvAddToHtml(tv);
+});
+
+// * Search app
